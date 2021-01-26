@@ -19,17 +19,9 @@
 
     $(function () {
 
-        var dptdtat_3 = <?php echo $DPTDTAT_3; ?>;
-        var dptusag_3 = <?php echo $DPTUSAG_3; ?>;
-        var dpthwt_3 = <?php echo $DPTHWT_3; ?>;
-        var dptdtat_9 = <?php echo $DPTDTAT_9; ?>;
-        var dptusag_9 = <?php echo $DPTUSAG_9; ?>;
-        var dpthwt_9 = <?php echo $DPTHWT_9; ?>;
-        var dptdtat_10 = <?php echo $DPTDTAT_10; ?>;
-        var dptusag_10 = <?php echo $DPTUSAG_10; ?>;
-        var dpthwt_10 = <?php echo $DPTHWT_10; ?>;
         var time = <?php echo $TIME_; ?>;
         var x_title = <?php echo ('"' . $XTitle . '"'); ?>;
+        var series = <?php echo $series; ?>;
 
         $('#container').highcharts({
             chart: {
@@ -55,38 +47,7 @@
                 },
                 cursor: 'pointer',
             },
-            series: [
-                {
-                    name: 'DPTDTAT_3',
-                    data: dptdtat_3
-                }, {
-                    name: 'DPTUSAG_3',
-                    data: dptusag_3
-                }, {
-                    name: 'DPTHWT_3',
-                    data: dpthwt_3
-                },
-                {
-                    name: 'DPTDTAT_9',
-                    data: dptdtat_9
-                }, {
-                    name: 'DPTUSAG_9',
-                    data: dptusag_9
-                }, {
-                    name: 'DPTHWT_9',
-                    data: dpthwt_9
-                },
-                {
-                    name: 'DPTDTAT_10',
-                    data: dptdtat_10
-                }, {
-                    name: 'DPTUSAG_10',
-                    data: dptusag_10
-                }, {
-                    name: 'DPTHWT_10',
-                    data: dpthwt_10
-                }
-            ]
+            series: series
         });
     });
 

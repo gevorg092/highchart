@@ -12,19 +12,35 @@ class Chart extends Controller {
     public function index()
     {
         $chart_model = new ChartModel();
-
-        $data['DPTDTAT_3'] = $chart_model->getDPTDTAT(3);
-        $data['DPTDTAT_9'] = $chart_model->getDPTDTAT(9);
-        $data['DPTDTAT_10'] = $chart_model->getDPTDTAT(10);
-        $data['DPTUSAG_3'] = $chart_model->getDPTUSAG(3);
-        $data['DPTUSAG_9'] = $chart_model->getDPTUSAG(9);
-        $data['DPTUSAG_10'] = $chart_model->getDPTUSAG(10);
-        $data['DPTHWT_3'] = $chart_model->getDPTHWT(3);
-        $data['DPTHWT_9'] = $chart_model->getDPTHWT(9);
-        $data['DPTHWT_10'] = $chart_model->getDPTHWT(10);
-//        $data['NGWC'] = $chart_model->getNGWC();
+        $data['NGWC'] = $chart_model->getTypeNGWC();
         $data['TIME_'] = $chart_model->getTIME();
         $data['XTitle'] = $chart_model->getXTitle();
+
+        $type = json_decode($data['NGWC']);
+        $series = array();
+
+        for ($i=0; $i<count($type); $i++) {
+            $data['DPTDTAT_' . $type[$i]] = $chart_model->getDPTDTAT(intval($type[$i]));
+            $serie = array(
+                'name' => 'DPTDTAT_' . $type[$i],
+                'data' => $data['DPTDTAT_' . $type[$i]],
+            );
+            array_push($series, $serie);
+            $data['DPTUSAG_' . $type[$i]] = $chart_model->getDPTUSAG(intval($type[$i]));
+            $serie = array(
+                'name' => 'DPTUSAG_' . $type[$i],
+                'data' => $data['DPTUSAG_' . $type[$i]],
+            );
+            array_push($series, $serie);
+            $data['DPTHWT_' . $type[$i]] = $chart_model->getDPTHWT(intval($type[$i]));
+            $serie = array(
+                'name' => 'DPTHWT_' . $type[$i],
+                'data' => $data['DPTHWT_' . $type[$i]],
+            );
+            array_push($series, $serie);
+        }
+
+        $data['series'] = json_encode($series);
 
         echo view('chart', $data);
     }

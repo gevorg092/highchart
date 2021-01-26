@@ -16,7 +16,10 @@ class ChartModel extends Model
                 array_push($result, intval($data[$i][$key]));
         }
 
-        return json_encode($result);
+        if ($key === 'NGWC')
+            return json_encode($result);
+        else
+            return ($result);
     }
 
     public function getDPTDTAT($key) {
@@ -68,11 +71,20 @@ class ChartModel extends Model
             ->orderBy('START_', 'ASC')
             ->findAll(1);
         $min = $data[0]['START_'];
+
         $data = $this->select('START_')
             ->orderBy('START_', 'DESC')
             ->findAll(1);
         $max = $data[0]['START_'];
 
         return ($min . ' ~ ' . $max);
+    }
+
+    public function getTypeNGWC() {
+        $data = $this->select('NGWC')
+            ->groupBy('NGWC')
+            ->findAll();
+
+        return $this->getJsonData($data, "NGWC");
     }
 }

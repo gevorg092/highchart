@@ -434,3 +434,27 @@ CRITICAL - 2021-01-26 12:04:39 --> array_push() expects parameter 1 to be array,
 #5 /opt/lampp/htdocs/highcharts/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 /opt/lampp/htdocs/highcharts/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2021-01-26 14:40:13 --> array_push() expects parameter 1 to be array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', '/opt/lampp/htdo...', 34, Array)
+#1 /opt/lampp/htdocs/highchart/app/Controllers/Chart.php(34): array_push(NULL, 'DPTDTAT_3')
+#2 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(918): App\Controllers\Chart->index()
+#3 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chart))
+#4 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/highchart/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-26 14:40:19 --> array_push() expects parameter 1 to be array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() ex...', '/opt/lampp/htdo...', 34, Array)
+#1 /opt/lampp/htdocs/highchart/app/Controllers/Chart.php(34): array_push(NULL, 'DPTDTAT_3')
+#2 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(918): App\Controllers\Chart->index()
+#3 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chart))
+#4 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/highchart/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-26 15:00:54 --> json_decode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_decode() e...', '/opt/lampp/htdo...', 19, Array)
+#1 /opt/lampp/htdocs/highchart/app/Controllers/Chart.php(19): json_decode(Array)
+#2 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(918): App\Controllers\Chart->index()
+#3 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Chart))
+#4 /opt/lampp/htdocs/highchart/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/highchart/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
