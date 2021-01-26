@@ -1,3 +1,9 @@
+<!--
+-- The view file for chart.
+--
+-- @packege app/Views
+-- @author Ion Podolean <ion.podolean22@gmail.com>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

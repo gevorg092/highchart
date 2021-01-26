@@ -6,6 +6,9 @@ class ChartModel extends Model
 {
     protected $table = 'chartdata';
 
+    /**
+     * The function for get json data.
+    **/
     public function getJsonData($data, $key){
         $result = array();
 
@@ -16,12 +19,15 @@ class ChartModel extends Model
                 array_push($result, intval($data[$i][$key]));
         }
 
-        if ($key === 'NGWC')
+        if ($key === 'NGWC' || $key === 'TIME')
             return json_encode($result);
         else
             return ($result);
     }
 
+    /**
+     * The function for get DPTDTAT data.
+     **/
     public function getDPTDTAT($key) {
         $data = $this->select('DPTDTAT')
             ->where('NGWC', $key)
@@ -31,6 +37,9 @@ class ChartModel extends Model
         return $this->getJsonData($data, "DPTDTAT");
     }
 
+    /**
+     * The function for get DPTUSAG data.
+     **/
     public function getDPTUSAG($key) {
         $data = $this->select('DPTUSAG')
             ->where('NGWC', $key)
@@ -40,6 +49,9 @@ class ChartModel extends Model
         return $this->getJsonData($data, "DPTUSAG");
     }
 
+    /**
+     * The function for get DPTHWT data.
+     **/
     public function getDPTHWT($key) {
         $data = $this->select('DPTHWT')
             ->where('NGWC', $key)
@@ -49,6 +61,9 @@ class ChartModel extends Model
         return $this->getJsonData($data, "DPTHWT");
     }
 
+    /**
+     * The function for get NGWC data.
+     **/
     public function getNGWC() {
         $data = $this->select('NGWC')
             ->orderBy('START_', 'ASC')
@@ -57,6 +72,9 @@ class ChartModel extends Model
         return $this->getJsonData($data, "NGWC");
     }
 
+    /**
+     * The function for get TIME data.
+     **/
     public function getTIME() {
         $data = $this->select('TIME')
             ->orderBy('START_', 'ASC')
@@ -66,6 +84,9 @@ class ChartModel extends Model
         return $this->getJsonData($data, "TIME");
     }
 
+    /**
+     * The function for get title of X-axis.
+     **/
     public function getXTitle() {
         $data = $this->select('START_')
             ->orderBy('START_', 'ASC')
@@ -80,6 +101,9 @@ class ChartModel extends Model
         return ($min . ' ~ ' . $max);
     }
 
+    /**
+     * The function for get types of NGWC.
+     **/
     public function getTypeNGWC() {
         $data = $this->select('NGWC')
             ->groupBy('NGWC')
