@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebdc77ab-0a69-4efb-a0f7-1931b1305a01" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Chart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Chart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/ChartModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ChartModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/chart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/chart.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controllers/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="160">
+              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/ChartModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="107" column="37" lean-forward="true" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+            <state relative-caret-position="162">
+              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -81,8 +80,8 @@
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Views/chart.php" />
-        <option value="$PROJECT_DIR$/app/Controllers/Chart.php" />
         <option value="$PROJECT_DIR$/app/Models/ChartModel.php" />
+        <option value="$PROJECT_DIR$/app/Controllers/Chart.php" />
       </list>
     </option>
   </component>
@@ -171,12 +170,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611692881066</updated>
-      <workItem from="1611692883464" duration="3107000" />
+      <workItem from="1611692883464" duration="3655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3107000" />
+    <option name="totallyTimeSpent" value="3655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="27" width="1780" height="937" extended-state="6" />
@@ -227,13 +226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controllers/Chart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Views/chart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-576">
@@ -243,8 +235,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/ChartModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="107" column="37" lean-forward="true" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+        <state relative-caret-position="162">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controllers/Chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
         </state>
       </provider>
     </entry>

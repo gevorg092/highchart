@@ -26,39 +26,15 @@ class ChartModel extends Model
     }
 
     /**
-     * The function for get DPTDTAT data.
-     **/
-    public function getDPTDTAT($key) {
-        $data = $this->select('DPTDTAT')
+     * The function for get data.
+    **/
+    public function getDatas($column, $key) {
+        $data = $this->select($column)
             ->where('NGWC', $key)
             ->orderBy('START_', 'ASC')
             ->findAll();
 
-        return $this->getJsonData($data, "DPTDTAT");
-    }
-
-    /**
-     * The function for get DPTUSAG data.
-     **/
-    public function getDPTUSAG($key) {
-        $data = $this->select('DPTUSAG')
-            ->where('NGWC', $key)
-            ->orderBy('START_', 'ASC')
-            ->findAll();
-
-        return $this->getJsonData($data, "DPTUSAG");
-    }
-
-    /**
-     * The function for get DPTHWT data.
-     **/
-    public function getDPTHWT($key) {
-        $data = $this->select('DPTHWT')
-            ->where('NGWC', $key)
-            ->orderBy('START_', 'ASC')
-            ->findAll();
-
-        return $this->getJsonData($data, "DPTHWT");
+        return $this->getJsonData($data, $column);
     }
 
     /**

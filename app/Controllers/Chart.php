@@ -20,19 +20,21 @@ class Chart extends Controller {
         $series = array();
 
         for ($i=0; $i<count($type); $i++) {
-            $data['DPTDTAT_' . $type[$i]] = $chart_model->getDPTDTAT(intval($type[$i]));
+            $data['DPTDTAT_' . $type[$i]] = $chart_model->getDatas('DPTDTAT', intval($type[$i]));
             $serie = array(
                 'name' => 'DPTDTAT_' . $type[$i],
                 'data' => $data['DPTDTAT_' . $type[$i]],
             );
             array_push($series, $serie);
-            $data['DPTUSAG_' . $type[$i]] = $chart_model->getDPTUSAG(intval($type[$i]));
+
+            $data['DPTUSAG_' . $type[$i]] = $chart_model->getDatas('DPTUSAG', intval($type[$i]));
             $serie = array(
                 'name' => 'DPTUSAG_' . $type[$i],
                 'data' => $data['DPTUSAG_' . $type[$i]],
             );
             array_push($series, $serie);
-            $data['DPTHWT_' . $type[$i]] = $chart_model->getDPTHWT(intval($type[$i]));
+
+            $data['DPTHWT_' . $type[$i]] = $chart_model->getDatas('DPTHWT', intval($type[$i]));
             $serie = array(
                 'name' => 'DPTHWT_' . $type[$i],
                 'data' => $data['DPTHWT_' . $type[$i]],
